@@ -1,188 +1,58 @@
-Contribution: 2021-09-14 20:00
+# CryptoBlades
 
-Contribution: 2021-09-14 20:01
+## Currency Setup
 
-Contribution: 2021-09-14 20:02
+1. Install [Ganache](https://www.trufflesuite.com/ganache).
+1. For Ganache, choose Quickstart Ethereum.
+1. Increase the gas limit in the workspace to `99999999` (or some other high number so you can deploy).
+1. Install [MetaMask](https://metamask.io/).
+1. Create a new connection to connect to Ganache with these settings: http://localhost:7545, any name, any chain id
+1. In Ganache, click the key icon on the right side of any address and grab the private key.
+1. In MetaMask, create a new account, import from private key, and paste the key in there. 
 
-Contribution: 2021-09-14 20:03
+You should now have 100 fake eth! You're now fake rich.
 
-Contribution: 2021-09-14 20:04
+## Frontend Setup
 
-Contribution: 2021-09-14 20:05
+1. `npm install`
+1. `mv .env.local .env` (copy the example env to your local so it can be used)
+1. `npm run contract:prepare` (this builds your contracts)
+1. `npm run contract:deploy` (this deploys your contracts to your local blockchain)
+1. `npm run start:frontend`
 
-Contribution: 2021-09-14 20:06
+For Windows developers experiencing errors follow these steps:
+1. `rm -r build`
+1. `npm run contract:prepare` (this builds your contracts)
+1. `rm -r build/contracts`
+1. `npm run contract:deploy`
+1. `npm run start:frontend`
 
-Contribution: 2021-09-14 20:07
+### VSCode Setup
 
-Contribution: 2021-09-14 20:08
+If you're using VSCode, we recommend these extensions: Auto Rename Tag, EditorConfig for VSCode, Eslint, Github Pull Requests, Gitlens, Javascript and Typescript, Live Share, Solidity, Typescript Hero, Vetur
 
-Contribution: 2021-09-14 20:09
+## Environment Variables
 
-Contribution: 2021-09-15 20:00
+There are optional environment variables, most of which have sensible defaults if copied from `.env.local`:
 
-Contribution: 2021-09-15 20:01
+- `VUE_APP_API_URL` - the API URL to use - defaults to prod (which will throw CORS errors on local)
 
-Contribution: 2021-09-15 20:02
+## Structure
 
-Contribution: 2021-09-15 20:03
+- `contracts` contains the solidity contracts for the game
+- `frontend` contains the Vue code for the frontend
+- `migrations` contains migration files
+- `test` contains tests
 
-Contribution: 2021-09-15 20:04
+## Commands
 
-Contribution: 2021-09-15 20:05
+- `npm run start:frontend` - start up a server for the Vue frontend
+- `npm run lint` - run lint checking for all modules
+- `npm run contract:prepare` - extract the ABI and re-compile Truffle contracts
+- `npm run contract:deploy` - deploy the Truffle contracts for testing
 
-Contribution: 2021-09-15 20:06
+## Errors
+- If you run into any error at all during the build process you may need to reset [Ganache](https://www.trufflesuite.com/ganache) by deleting previous workspaces and going through the Ganache setup process again including importing a new account for Metamask.
+- Artifacts are from different compiler runs `- rm -rf build/`
 
-Contribution: 2021-09-15 20:07
-
-Contribution: 2021-09-15 20:08
-
-Contribution: 2021-09-15 20:09
-
-Contribution: 2021-09-15 20:10
-
-Contribution: 2021-09-15 20:11
-
-Contribution: 2021-09-15 20:12
-
-Contribution: 2021-09-15 20:13
-
-Contribution: 2021-09-15 20:14
-
-Contribution: 2021-09-15 20:15
-
-Contribution: 2021-09-16 20:00
-
-Contribution: 2021-09-16 20:01
-
-Contribution: 2021-09-16 20:02
-
-Contribution: 2021-09-16 20:03
-
-Contribution: 2021-09-16 20:04
-
-Contribution: 2021-09-16 20:05
-
-Contribution: 2021-09-18 20:00
-
-Contribution: 2021-09-18 20:01
-
-Contribution: 2021-09-18 20:02
-
-Contribution: 2021-09-18 20:03
-
-Contribution: 2021-09-22 20:00
-
-Contribution: 2021-09-22 20:01
-
-Contribution: 2021-09-22 20:02
-
-Contribution: 2021-09-22 20:03
-
-Contribution: 2021-09-22 20:04
-
-Contribution: 2021-09-22 20:05
-
-Contribution: 2021-09-22 20:06
-
-Contribution: 2021-09-22 20:07
-
-Contribution: 2021-09-22 20:08
-
-Contribution: 2021-09-22 20:09
-
-Contribution: 2021-09-22 20:10
-
-Contribution: 2021-09-22 20:11
-
-Contribution: 2021-09-22 20:12
-
-Contribution: 2021-09-22 20:13
-
-Contribution: 2021-09-22 20:14
-
-Contribution: 2021-09-22 20:15
-
-Contribution: 2021-09-23 20:00
-
-Contribution: 2021-09-23 20:01
-
-Contribution: 2021-09-29 20:00
-
-Contribution: 2021-09-29 20:01
-
-Contribution: 2021-09-29 20:02
-
-Contribution: 2021-09-29 20:03
-
-Contribution: 2021-09-29 20:04
-
-Contribution: 2021-09-29 20:05
-
-Contribution: 2021-09-29 20:06
-
-Contribution: 2021-09-29 20:07
-
-Contribution: 2021-09-29 20:08
-
-Contribution: 2021-09-29 20:09
-
-Contribution: 2021-09-29 20:10
-
-Contribution: 2021-10-01 20:00
-
-Contribution: 2021-10-01 20:01
-
-Contribution: 2021-10-02 20:00
-
-Contribution: 2021-10-02 20:01
-
-Contribution: 2021-10-02 20:02
-
-Contribution: 2021-10-02 20:03
-
-Contribution: 2021-10-02 20:04
-
-Contribution: 2021-10-02 20:05
-
-Contribution: 2021-10-02 20:06
-
-Contribution: 2021-10-02 20:07
-
-Contribution: 2021-10-02 20:08
-
-Contribution: 2021-10-02 20:09
-
-Contribution: 2021-10-05 20:00
-
-Contribution: 2021-10-05 20:01
-
-Contribution: 2021-10-05 20:02
-
-Contribution: 2021-10-05 20:03
-
-Contribution: 2021-10-05 20:04
-
-Contribution: 2021-10-05 20:05
-
-Contribution: 2021-10-05 20:06
-
-Contribution: 2021-10-05 20:07
-
-Contribution: 2021-10-05 20:08
-
-Contribution: 2021-10-05 20:09
-
-Contribution: 2021-10-05 20:10
-
-Contribution: 2021-10-05 20:11
-
-Contribution: 2021-10-05 20:12
-
-Contribution: 2021-10-05 20:13
-
-Contribution: 2021-10-05 20:14
-
-Contribution: 2021-10-05 20:15
-
-Contribution: 2021-10-05 20:16
-
+# cryptoblades-fork
